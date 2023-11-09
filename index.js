@@ -113,33 +113,57 @@ for(let i = 0; i < (totalMonths - 1); i++ ){
 }
 
 // Calculate Monthly Average
-let totalChange = 0;
-for(let i = 0; i < change.length; i++) {
-  totalChange += change[i];
-}
+// let totalChange = 0;
+// for(let i = 0; i < change.length; i++) {
+//   totalChange += change[i];
+// }
 
-avgChange = (totalChange/(totalMonths - 1));
-avgChange = Math.round(avgChange * 100) / 100;
+// avgChange = (totalChange/(totalMonths - 1));
+// avgChange = Math.round(avgChange * 100) / 100;
 
 // Find Greatest Increase
-var increaseMonth = "";
+// var increaseMonth = "";
+// for (let i = 0; i < change.length; i++) {
+//   if(change[i] > greatestInc){
+//     greatestInc = change[i];
+//     j =i + 1;
+//     increaseMonth = finances[j][0];
+//   }
+// }
+
+// Find Greatest Decrease
+// var decreaseMonth = "";
+// for (let i = 0; i < change.length; i++) {
+//   if(change[i] < greatestDec){
+//     greatestDec = change[i];
+//     j =i + 1;
+//     decreaseMonth = finances[j][0];
+//   }
+// }
+
+//===========================================//
+// Reducing the number of for loops
+let increaseMonth = "";
+let decreaseMonth = "";
+let totalChange = 0;
+
 for (let i = 0; i < change.length; i++) {
+  totalChange += change[i];
   if(change[i] > greatestInc){
     greatestInc = change[i];
     j =i + 1;
     increaseMonth = finances[j][0];
   }
-}
-
-// Find Greatest Decrease
-var decreaseMonth = "";
-for (let i = 0; i < change.length; i++) {
   if(change[i] < greatestDec){
     greatestDec = change[i];
     j =i + 1;
     decreaseMonth = finances[j][0];
   }
 }
+
+avgChange = (totalChange/(totalMonths - 1));
+avgChange = Math.round(avgChange * 100) / 100;
+//===========================================//
 
 // Print to console
 console.log("Financial Analysis");
