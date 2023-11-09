@@ -19,12 +19,18 @@ Analysis needs to output the following...
 5) DRY code, original code contains 3 for loops, which can be condessed ino one. 
 
 ## Hosted Site:
-https://www.deanwaring.co.uk
+https://deanw77.github.io/Console-Finances/
 
 ### Project Overview
- Very challenging project. Particularly when making changes with media queries
- trying to ensure that my changes don't accidentally effect other parts of the document. <br>
-Definitely feel I learnt a lot getting this project completed. 
 
-### Final Result Mock Up
-![My final version on my portfolio](images/screenshot.png)
+A very enjoyable project. I initially had some difficulty figuring out how to access each of the elements in the nested array (Getting only the Date or the Profit/Loss figure). Calculating the Average Change was the biggest challenge. 
+I initially solved each problem individually, each with it's own loops but after decided that since I had three loops all running with identical coditional statements it would be better practice to put it into one loop so as not to repeat code. 
+I have commented out my initial three loops so I can see from the code firstly how I solved each problem then how I reduced the number of loops. 
+
+### Final Result
+![Console Data Display](images/Console.Finances.jpg)
+
+### The search for bonus points
+I then decided to practice getting data from the JavaScript console and displaying it directly on the HTML page. What I have is possibly not the most elegant solution to achieve this, but itworks and prodices no errors.
+
+![HTML Data Display](images/Console.FinancesHTML.jpg)
