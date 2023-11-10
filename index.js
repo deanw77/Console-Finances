@@ -88,14 +88,11 @@ var finances = [
 ];
 
 // Declare Variables
-let totalMonths = 0;
+let totalMonths = finances.length;
 let total = 0;
 let avgChange = 0;
 let greatestInc = 0;
-let greatestDec =0;
-
-// Calculate Total Months
-totalMonths = finances.length;
+let greatestDec = 0;
 
 // Calculate Total
 for(let i = 0; i < totalMonths; i++ ){
@@ -118,7 +115,7 @@ for(let i = 0; i < (totalMonths - 1); i++ ){
 //   totalChange += change[i];
 // }
 
-// avgChange = (totalChange/(totalMonths - 1));
+// avgChange = (totalChange/(change.length));
 // avgChange = Math.round(avgChange * 100) / 100;
 
     // Find Greatest Increase
@@ -166,14 +163,15 @@ avgChange = Math.round(avgChange * 100) / 100;
 //===========================================//
 
 // Print to console
-console.log("Financial Analysis");
-console.log("----------------");
-console.log("Total Months: " + totalMonths);
-console.log("Total: $" + total);
-console.log("Average Change: " + avgChange);
-console.log("Greatest Increase in Profits/Losses: " + increaseMonth + " ($" + greatestInc + ")");
-console.log("Greatest Decrease in Profits/Losses: " + decreaseMonth + " ($" + greatestDec + ")");
+console.log(`Financial Analysis`);
+console.log(`----------------`);
+console.log(`Total Months: ${totalMonths}`);
+console.log(`Total: $ ${total}`);
+console.log(`Average Change: ${avgChange}`);
+console.log(`Greatest Increase in Profits/Losses: ${increaseMonth} ($${greatestInc})`);
+console.log(`Greatest Decrease in Profits/Losses: ${decreaseMonth} ($${greatestDec})`);
 
+//===========================================//
 // Print to index.html, maybe worth a bonus point.
 document.getElementById("textLog").innerHTML += "Financial Analysis<br>";
 document.getElementById("textLog").innerHTML += "----------------<br>";
